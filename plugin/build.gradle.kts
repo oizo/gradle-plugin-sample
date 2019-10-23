@@ -7,7 +7,7 @@ plugins {
 dependencies {
     implementation(gradleApi())
     implementation(localGroovy())
-    implementation("com.android.tools.build:gradle:3.5.1")
+    implementation(Deps.gradle_plugin)
 }
 
 tasks.register<Jar>("sourcesJar") {
