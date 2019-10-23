@@ -4,10 +4,8 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("android.extensions")
-
+    id("io.hvam.android.plugin")
 }
-
-apply<io.hvam.android.plugin.StringPlugin>()
 
 android {
     compileSdkVersion(29)
