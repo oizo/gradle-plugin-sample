@@ -11,10 +11,7 @@ open class StringPlugin : Plugin<Project> {
         project.afterEvaluate {
             val android = extensions.findByName("android") as BaseExtension
             task("StringTask") {
-                android.productFlavors.all { flavor ->
-                    flavor.resValue("string", "my_plugin_string", "Hello, World! From plugin")
-                    true
-                }
+                android.defaultConfig.resValue("string", "my_plugin_string", "Hello, World! From plugin")
             }
         }
     }
